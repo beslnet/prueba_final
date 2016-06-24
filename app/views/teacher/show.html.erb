@@ -1,2 +1,9 @@
-<h1>Teacher#show</h1>
-<p>Find me in app/views/teacher/show.html.erb</p>
+<%= image_tag @teacher.photo.url(:thumb) %>
+<%= @teacher.fullname %>
+<p> Ranking: no hay ranking aún :/ </p>
+
+<p> C.V </p>
+
+<p><%= @teacher.resumen %></p>
+
+<p><%= link_to 'Volver', teacher_index_path %></p>

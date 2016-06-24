@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'teacher/index'
 
-  get 'teacher/show'
+  get 'teacher/show/:id' => 'teacher#show', as: :show_teacher
 
   get 'teacher/dashboard'
 

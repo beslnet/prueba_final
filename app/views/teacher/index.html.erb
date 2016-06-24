@@ -1,2 +1,29 @@
-<h1>Teacher#index</h1>
-<p>Find me in app/views/teacher/index.html.erb</p>
+<div class="panel panel-primary">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Listado de Profesores</div>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+	  <td>Avatar</td>
+      <td>Nombre</td>
+      <td>Asignatura</td>
+      <td>Ranking</td>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @teachers.each do |user| %>
+      <tr>
+      <td><%= image_tag user.photo.url(:thumb) %></td>
+      <td><%= user.fullname %></td>
+      <td><%= user.grade %></td>  
+      <td>No hay ranking programado aún >.< </td>      
+      <td><%= link_to 'Show', show_teacher_path(user) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+
+<br>
